@@ -16,6 +16,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        tab: "rounded-none border-b-2 border-transparent bg-transparent text-muted-foreground hover:text-primary data-[active=true]:border-primary data-[active=true]:text-primary",
+        role: "rounded-lg text-muted-foreground hover:text-foreground data-[active=true]:bg-card data-[active=true]:text-primary data-[active=true]:shadow-sm",
+        passport: "border border-primary/25 bg-card text-primary hover:bg-secondary shadow-none",
       },
       size: {
         default: "h-9 px-4 py-2",
