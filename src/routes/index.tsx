@@ -86,8 +86,8 @@ function TalentCard({
   requested: boolean;
 }) {
   return (
-    <article className="talent-card">
-      <div className="flex items-start gap-3">
+    <article className="talent-card" data-track={person.track}>
+      <div className="candidate-heading">
         <Avatar person={person} />
         <div className="min-w-0 flex-1">
           <div className="candidate-name">{person.name}</div>
@@ -102,6 +102,7 @@ function TalentCard({
           Verified
         </span>
       </div>
+      <p className="candidate-bio">{person.bio}</p>
       <div className="skills">
         {person.skills.map((skill) => (
           <span className="skill-chip" key={skill}>
@@ -359,12 +360,23 @@ function Index() {
               <span className="status-dot" />
               Opportunity, reimagined
             </div>
-            <h1>{headings[view].title}</h1>
+            <h1>
+              {headings[view].title.split(". ")[0]}.{" "}
+              <span>{headings[view].title.split(". ").slice(1).join(". ")}</span>
+            </h1>
             <p>{headings[view].copy}</p>
           </div>
           <div className="intro-note">
-            <Globe2 className="size-5" strokeWidth={1.5} />
-            <span>Great work knows no borders.</span>
+            <div className="community-portraits">
+              {initialTalent.map((person) => (
+                <Avatar key={person.id} person={person} />
+              ))}
+            </div>
+            <span>
+              Different journeys.
+              <br />
+              <strong>Extraordinary potential.</strong>
+            </span>
           </div>
         </div>
         <nav className="tabs" aria-label="Main views">
