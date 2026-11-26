@@ -38,10 +38,10 @@
   --background: oklch(0.969 0.006 90);
   --foreground: oklch(0.32 0.009 162);
   --card: oklch(0.982 0.004 88);
-  --primary: oklch(0.345 0.085 258);
+  --primary: oklch(0.47 0.075 173);
   --primary-foreground: oklch(0.982 0.004 88);
-  --primary-hover: oklch(0.29 0.075 258);
-  --secondary: oklch(0.931 0.032 250);
+  --primary-hover: oklch(0.41 0.065 173);
+  --secondary: oklch(0.924 0.035 163);
   --muted: oklch(0.943 0.008 88);
   --muted-foreground: oklch(0.519 0.012 164);
   --border: oklch(0.905 0.01 88);
